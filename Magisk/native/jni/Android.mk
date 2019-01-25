@@ -2,6 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 # Some handy paths
 EXT_PATH := jni/external
+INT_PATH := external/magisk/Magisk/native
 SE_PATH := $(EXT_PATH)/selinux
 LIBSELINUX := $(SE_PATH)/libselinux/include
 LIBSEPOL := $(SE_PATH)/libsepol/include $(SE_PATH)/libsepol/cil/include
@@ -138,6 +139,6 @@ endif
 ########################
 # Libraries
 ########################
-include jni/utils/Android.mk
-include jni/systemproperties/Android.mk
-include jni/external/Android.mk
+# include $(INT_PATH)/jni/utils/Android.mk
+# include $(INT_PATH)/jni/systemproperties/Android.mk
+# include $(INT_PATH)/jni/external/Android.mk
