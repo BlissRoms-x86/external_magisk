@@ -13,8 +13,8 @@ cc_binary {
 		"Magisk/native/jni/resetprop/system_property_set.cpp",
 
 		//Magisk hideutils
-		"Magisk/native/jni/magiskhide/hideutils.cpp",
-//		"Magisk/native/jni/magiskhide/magiskhide.cpp",
+		"Magisk/native/jni/magiskhide/hide_utils.cpp",
+		"Magisk/native/jni/magiskhide/magiskhide.cpp",
 
 		//Systemproperties
 		"Magisk/native/jni/systemproperties/context_node.cpp",
@@ -43,14 +43,16 @@ cc_binary {
 		"Magisk/native/jni/resetprop/",
 		"Magisk/native/jni/systemproperties/include/",
 		"Magisk/native/jni/external/nanopb/",
-	],
-},
+	]
+}
+
 cc_binary {
 	name: "suserver",
 	srcs: [
 		"rootserver.cpp"
 	]
-},
+}
+
 cc_binary {
 	name: "giveroot",
 	srcs: [
