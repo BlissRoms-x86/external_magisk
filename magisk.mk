@@ -1,19 +1,13 @@
+
+
 B_MAGISK := 1
 
-ifeq ($(TARGET_ARCH),x86)
+ifeq ($(TARGET_ARCH),arm mips x86)
 BB_INIT := 1
 PRODUCT_PACKAGES += \
 	magiskinit
-else ifeq ($(TARGET_ARCH),x86_64)
+else ifeq ($(TARGET_ARCH),arm64 x86_64)
 B_INIT64 := 1
-PRODUCT_PACKAGES += \
-	magiskinit64
-else ifeq ($(TARGET_ARCH),arm)
-BB_INIT := 1
-PRODUCT_PACKAGES += \
-	magiskinit
-else ifeq ($(TARGET_ARCH),arm64)
-BB_INIT64 := 1
 PRODUCT_PACKAGES += \
 	magiskinit64
 else
